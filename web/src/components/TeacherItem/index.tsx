@@ -3,32 +3,51 @@ import React from 'react';
 import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
 
 import './styles.css';
+import api from '../../services/api';
 
-function TeacherItem() {
+export interface Teacher {
+  id: number;
+  name: string;
+  avatar: string;
+  bio: string;
+  cost: number;
+  subject: string;
+  whatsapp: string;
+}
+
+export interface TeacherItemProps { 
+  teacher: Teacher;
+}
+
+const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
+
+  function createNewConnection() { 
+    api.post('/connections', { user_id: teacher.id })
+  }
+
   return (
     <article className="teacher-item">
       <header>
-        <img src="https://avatars1.githubusercontent.com/u/37607384?s=460&u=4ed86c9d95e3fba2ed44b1f34814a8c43eaa371c&v=4" alt="Luis V Capelletto"/>
+        <img src={ teacher.avatar } alt={ teacher.name }/>
         <div>
-          <strong>Luís V. Capelletto</strong>
-          <span>Filosofia</span>
+          <strong>{ teacher.name }</strong>
+          <span>{ teacher.subject }</span>
         </div>
       </header>
-      <p>
-        Entusiasta das melhores tecnologias de filosofia avançada. 
-        <br/> <br/>
-        Apaixonado por se entreter em pensamentos profundos e passar minhas reflexões a seres 
-        mundanos da selva de concreto. Mais de 100.000 pessoas foram iluminadas pelos meus conhecimentos.
-      </p>
+      <p>{ teacher.bio }</p>
       <footer>
         <p>
           Preço/hora
-          <strong>R$ 30,00</strong>
+          <strong>R$ { teacher.cost }</strong>
         </p>
-        <button type="button">
+        <a 
+          onClick={createNewConnection} 
+          href={`https://wa.me/${ teacher.whatsapp}/?text=Hello Proffy`} 
+          target="_blank" 
+        > 
           <img src={whatsappIcon} alt="whatsapp"/>
           Entrar em contato
-        </button>
+        </a>
       </footer>
     </article>
   );
