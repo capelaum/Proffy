@@ -1,8 +1,11 @@
-# Proffy
+<div align="center">
+  <h1>Proffy</h1>
+  <img src="web/src/assets/images/landing.svg" width="500" />
+</div>
 
 ## Introdução 
 
-Em homenagem ao Dia Nacional dos Profissionais da Educação - 6 de agosto, a [RocketSeat](https://rocketseat.com.br/) elaborou o projeto da Next LEvel Week 2.0 com tema educacional.
+Em homenagem ao Dia Nacional dos Profissionais da Educação - 6 de agosto, a [RocketSeat](https://rocketseat.com.br/) elaborou o projeto da Next Level Week 2.0 com um tema educacional.
 
 Uma plataforma de conexão entre estudantes e professores comprometidos com a educação, permitindo o cadastro de novos professores, com horário e dias das aulas, podendo ser consultados pelos alunos interessado através de filtros como dia da semana e horário da aula.
 
@@ -23,7 +26,7 @@ yarn knex:migrate
 yarn start
 ```
 
-Backend utiliza a porta [3333](localhost:3333)
+Backend utiliza a porta [3333](https://localhost:3333)
 
 Na pasta web, execute:
 
@@ -35,9 +38,11 @@ yarn install
 yarn start
 ```
 
-Frontend utiliza a porta [3000](localhost:3000)
+Frontend utiliza a porta [3000](https://localhost:3000)
 
-<img src="assets/Proffy Web (Copy).png" width="500"/>
+<div align="center">
+  <img src="assets/Proffy Web (Copy).png" width="500" />
+</div>
 
 ## Aplicação Mobile
 
@@ -51,4 +56,6 @@ yarn install
 yarn start
 ```
 
-<img src="assets/Proffy Mobile (Copy).png" width="500"/>
+<div align="center">
+  <img src="assets/Proffy Mobile (Copy).png" width="500"/>
+</div>
