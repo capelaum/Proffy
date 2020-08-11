@@ -37,7 +37,7 @@ yarn start
 
 Frontend utiliza a porta [3000](localhost:3000)
 
-<img src="assets/Proffy Web (Copy).png" width="500"><a/>
+<img src="assets/Proffy Web (Copy).png" width="500"/>
 
 ## Aplicação Mobile
 
@@ -51,4 +51,4 @@ yarn install
 yarn start
 ```
 
-<img src="assets/Proffy Mobile (Copy).png" width="500"><a/>
+<img src="assets/Proffy Mobile (Copy).png" width="500"/>
