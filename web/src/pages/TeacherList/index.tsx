@@ -27,7 +27,7 @@ function TeacherList() {
         week_day,
         time
       }
-    })
+    });
     // console.log({ subject, week_day, time});
     // console.log(response.data);
 
@@ -37,29 +37,29 @@ function TeacherList() {
   return (
     <div id="page-teacher-list" className="container">
       <PageHeader title="Estes são os proffys disponíveis.">
-        <form action="" id="search-teachers" onSubmit={ searchTeachers } >
-        <Select
-            name="subject" 
-            label="Matéria" 
+        <form action="" id="search-teachers" onSubmit={searchTeachers} >
+          <Select
+            name="subject"
+            label="Matéria"
             value={subject}
-            onChange={ e => { setSubject(e.target.value)} }
+            onChange={e => { setSubject(e.target.value); }}
             options={[
-              { value: 'Artes', label: 'Artes' },
-              { value: 'Filosofia', label: 'Filosofia' },
-              { value: 'Matemática', label: 'Matemática' },
-              { value: 'Biologia', label: 'Biologia' },
-              { value: 'Ciências', label: 'Ciências' },
-              { value: 'História', label: 'História' },
-              { value: 'Geografia', label: 'Geografia' },
-              { value: 'Português', label: 'Protuguês' },
+              { value: 'Node.js', label: 'Node.js' },
+              { value: 'React.js', label: 'React.js' },
+              { value: 'Next.js', label: 'Next.js' },
+              { value: 'HTML', label: 'HTML' },
+              { value: 'CSS', label: 'CSS' },
+              { value: 'Javascript', label: 'Javascript' },
+              { value: 'PHP', label: 'PHP' },
+              { value: 'Banco de dados', label: 'Banco de dados' },
             ]}
           />
 
           <Select
-            name="week_day" 
-            label="Dia da Semana" 
+            name="week_day"
+            label="Dia da Semana"
             value={week_day}
-            onChange={ e => { setWeekDay(e.target.value)} }
+            onChange={e => { setWeekDay(e.target.value); }}
             options={[
               { value: '0', label: 'Segunda-feira' },
               { value: '1', label: 'Terça-feira' },
@@ -70,21 +70,21 @@ function TeacherList() {
               { value: '6', label: 'Domingo' },
             ]}
           />
-          <Input 
-            type="time" 
-            name="time" 
-            label="Hora" 
+          <Input
+            type="time"
+            name="time"
+            label="Hora"
             value={time}
-            onChange={ e => {setTime(e.target.value)} }
+            onChange={e => { setTime(e.target.value); }}
           />
-          
+
           <button type="submit">Buscar</button>
         </form>
       </PageHeader>
 
       <main>
         {teachers.map((teacher: Teacher) => {
-          return <TeacherItem  key={teacher.id} teacher={teacher} />
+          return <TeacherItem key={teacher.id} teacher={teacher} />;
         })}
       </main>
     </div>
